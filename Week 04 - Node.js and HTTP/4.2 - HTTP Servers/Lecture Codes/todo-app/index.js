@@ -12,28 +12,28 @@ let todos = [];
 
 // create a route handler for POST request on the root URL
 app.post("/", function (req, res) {
-
-    // add a new todo to the todos array in memory
-    todos.push({
-        title: "Learn Node.js",
-        id: 1
-    });
+  // add a new todo to the todos array in memory
+  todos.push({
+    title: "Learn Node.js",
+    id: 1,
+  });
 });
 
-// create a route handler for DELETE request on the root URL 
+// create a route handler for DELETE request on the root URL
 app.delete("/", function (req, res) {
-    // remove the todos from the todos array in memory
-    todos = todos.pop();
+  // remove the todos from the todos array in memory
+  todos = todos.pop();
 });
 
 // create a route handler for GET request on the root URL
 app.get("/", function (req, res) {
-    // send the todos array as a response to the client
-    res.send(todos);
+  // send the todos array as a response to the client
+  res.send(todos);
 });
 
 // start the server on port 3000
 app.listen(3000);
+
 
 
 /*

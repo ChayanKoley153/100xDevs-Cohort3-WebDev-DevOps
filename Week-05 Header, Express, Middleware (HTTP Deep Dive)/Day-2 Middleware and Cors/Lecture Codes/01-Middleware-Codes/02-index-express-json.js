@@ -1,13 +1,12 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(express.json())
+app.use(bodyParser.json())
 
-app.post("/sum", function  sumHandler(req, res) {
-
-    console.log(req.body);          //This will show output as UNDEFINED but jaise hi yeh external middleware use krenge then yeh body ka value jo hm postman app pe jakr body mein add krenge toh woh dikhayega 
-
+app.post("/sum", function (req, res) {
+    console.log(req.body);  
     const a = parseInt(req.body.a)
     const b = parseInt(req.body.b)
     
@@ -16,4 +15,4 @@ app.post("/sum", function  sumHandler(req, res) {
     });
 });
 
-app.listen(3000)
+app.listen(3000);

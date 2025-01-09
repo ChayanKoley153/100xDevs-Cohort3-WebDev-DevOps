@@ -11,12 +11,5 @@ async function main(){
     console.log(response.data.todos.length);
 }
 
-
 main();
 
-
-/*
-Notes:
-- Axios has more cleaner syntax comapred to fetch 
-- In axios we provide what kind od request we want like the get, post 
-*/
